@@ -12,7 +12,7 @@ You find the dlib model in the assets folder.
 The following picture illustrates the dlib facial landmark coordinates:
 
 <p align="center">
-  <img src="/assets/68_facial_landmark_coordinates_dlib.jpg.jpg">
+  <img src="/assets/68_facial_landmark_coordinates_dlib.jpg">
 </p>
 
 It is worth playing around a bit with the code to set the proper threshold value. Contours of both
