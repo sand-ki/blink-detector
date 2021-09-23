@@ -21,6 +21,11 @@ You can follow the video capture live, it is also saved to the disk if the corre
 (video_writing) is set to True.
 Number of blinking per minute is saved to a csv file.
 
+A very detailed tutorial and explanation of a blink detector can be found on 
+[pyimagesearch](https://www.pyimagesearch.com/2017/04/24/eye-blink-detection-opencv-python-dlib/)
+created by Adrian, many thanks for it.
+
+
 ## Getting Started
 ### Installing & get the code up and running
 
