@@ -4,16 +4,15 @@ import dlib
 import numpy as np
 import pandas as pd
 import time
-from scipy.spatial import distance as dist
 
 
 def get_eye_aspect_ratio(eye_points):
     # Vertical eye landmarks
-    left_vertical_distance = dist.euclidean(eye_points[1], eye_points[5])
-    right_vertical_distance = dist.euclidean(eye_points[2], eye_points[4])
+    left_vertical_distance = np.sqrt(np.sum(np.square(eye_points[1] - eye_points[5])))
+    right_vertical_distance = np.sqrt(np.sum(np.square(eye_points[2] - eye_points[4])))
 
     # Horizontal eye landmarks
-    horizontal_distance = dist.euclidean(eye_points[0], eye_points[3])
+    horizontal_distance = np.sqrt(np.sum(np.square(eye_points[0] - eye_points[3])))
 
     # compute the EAR: (|(P2 - P6)| + |(P3 - P5)|) / 2 * |(P1 - P4)|
     ear = (left_vertical_distance + right_vertical_distance) / (2 * horizontal_distance)
